@@ -1,0 +1,32 @@
+# ==============================================
+# --- SERVER MANAGER CONFIG (Restart System) ---
+# ==============================================
+#
+# RULES:
+# 1. Lines starting with # are comments.
+# 2. Do NOT use quotation marks "".
+# 3. Do NOT use spaces around the = sign.
+#
+# WRONG: MAIN_SERVER_DIR = "C:\Server"
+# RIGHT: MAIN_SERVER_DIR=C:\Server
+#
+# ==============================================
+
+# --- 1. PATHS ---
+# (Where are your servers?)
+MAIN_SERVER_DIR=C:\Users\Anwender\Desktop\server\!!ServerUpdatePorject\Server1
+TEST_SERVER_DIR=C:\Users\Anwender\Desktop\server\!!ServerUpdatePorject\Server2
+
+# --- 2. RCON (Remote control for Server 2) ---
+# (Must match server.properties of Server 2)
+RCON_PASS=YourSecurePassword
+TEST_RCON_PORT=25576
+
+# --- 3. JAVA (RAM Allocation) ---
+# (Will be used for BOTH servers)
+JAVA_ARGS=-Xmx20G -Xms1G -jar server.jar nogui
+
+# --- 4. WAIT TIMES (in seconds) ---
+WAIT_TEST_SERVER_START=10
+WAIT_BOTH_SERVERS_STOP=15
+WAIT_BEFORE_RESTART=5
